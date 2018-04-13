@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RubyLocke_Unit06_2.Site" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Chapter 9: Reservations</title>
+    <link href="Styles/main.css" rel="stylesheet"/>
+
+    <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <h1>Royal Inns and Suites</h1>
+        <h2>Where you are always treated like royalty</h2>
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li><asp:HyperLink NavigateUrl="~/request.aspx" runat="server">Request</asp:HyperLink></li>
+                <li><asp:HyperLink NavigateUrl="~/confirm.aspx" runat="server">Confirmation</asp:HyperLink></li>
+            </ul>
+        </nav>
+    </aside>
+    <section>
+        <form runat="server">
+                <asp:Label ID="lblH1" runat="server"></asp:Label>
+            <asp:ContentPlaceHolder ID="formPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </section>
+    <footer>
+        <asp:ContentPlaceHolder id="footerPlaceHolder" runat="server">   
+            <asp:Label ID="lblfooter" runat="server"></asp:Label>     
+        </asp:ContentPlaceHolder>
+        <!-- <p>&copy; 2013, Royal Inns and Suites</p> -->
+    </footer>
+</body>
+</html>
